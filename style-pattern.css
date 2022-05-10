@@ -1,0 +1,218 @@
+/***********************************
+VARIABLES
+************************************/
+/*
+_variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
+Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
+/***********************************
+ATOMS
+************************************/
+/*
+_variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
+Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
+h1 {
+  font-family: Tapestry;
+  font-size: 6em;
+  line-height: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+h2 {
+  font-family: Tapestry;
+  font-size: 3.5em;
+  line-height: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+h3 {
+  font-family: Tapestry;
+  font-size: 2.25em;
+  line-height: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-family: Tapestry;
+  font-size: 1em;
+  line-height: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+p {
+  font-family: Tapestry;
+  font-size: 1em;
+  line-height: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+a {
+  color: #DDDBF1;
+  text-decoration: none;
+}
+ahover {
+  border-color: #384E77;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0D0630;
+  padding: 5%;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+}
+
+h1 {
+  color: #DDDBF1;
+}
+
+main {
+  background-color: #DDDBF1;
+  padding: 2em;
+}
+main a {
+  color: #0D0630;
+  text-decoration: underline;
+}
+
+.colors {
+  display: flex;
+  flex-flow: row wrap;
+}
+.colors > h3 {
+  width: 100%;
+  flex: 1 0 100%;
+}
+.colors > figure {
+  margin: 0;
+  flex: 1 1 25%;
+}
+
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+
+.primary {
+  background-color: #0D0630;
+}
+
+.secondary {
+  background-color: #18314F;
+}
+
+.accent1 {
+  background-color: #DDDBF1;
+}
+
+.accent2 {
+  background-color: #384E77;
+}
+
+.accent3 {
+  background-color: #8BBEB2;
+}
+
+.campfire-yellow {
+  background-color: #F4E409;
+}
+
+.campfire-orange {
+  background-color: #EEBA0B;
+}
+
+.campfire-red {
+  background-color: #a63c06;
+}
+
+.element {
+  border: 1px solid;
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*
+@use 'variables' as *; //this puts all the variables in the global namespace.
+@use 'atoms';
+//@use 'molecules';
+//@use 'organisms' as o;
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: $background-color;
+  padding: 5%;
+}
+
+body {
+  font-family: $fonts-body;
+  font-size: 85%;
+  color: $text-dark;
+  background-color: $primary;
+  margin: 0;
+  padding: 1em;
+}
+
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+}
+.colors {
+  @include atoms.set-flex();
+  > h3 {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  > figure {
+    margin: 0;
+    flex: 1 1 25%;
+  }
+}
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+.primary {
+  background-color: $primary;
+}
+.accent1 {
+  background-color: $accent1;
+}
+.accent2 {
+  background-color: $accent2;
+}
+.text-dark {
+  background-color: $text-dark;
+}
+.element {
+  border: 1px solid;
+  margin: 0.5em;
+  padding: 1em;
+}
+.uppercase {
+  @include atoms.uppercase;
+}
+.uppercase-light {
+  @include atoms.uppercase($text-light);
+}*/
+
+/*# sourceMappingURL=style-pattern.css.map */

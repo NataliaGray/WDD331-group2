@@ -1,9 +1,21 @@
-$fonts-headline: "arial narrow", Arial, Verdana, sans-serif;
-$fonts-body: verdana, arial, sans-serif;
-$background-color: #daede2;
-$primary: #77c4d3;
-$accent1: #ea2e49;
-$accent2: rgba(246, 247, 146, 0.9);
-$grey-sidebar: rgba(51, 55, 69, 0.9);
-$text-dark: #333;
-$text-light: #fff;
+/***********************************
+VARIABLES
+************************************/
+/*
+_variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
+Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+// variables used throughout the theme
+$font-header: Tapestry;
+$font-paragraph: Tapestry;
+$primary: #0D0630; // russian violet
+$secondary: #18314F; // prussian blue
+$accent1: #DDDBF1; // lavender
+$accent2: #384E77; // y in mn blue
+$accent3: #8BBEB2; // green sheen
+$campfire-yellow: #F4E409; // titanium yellow
+$campfire-orange: #EEBA0B; // orange yellow
+$campfire-red: #a63c06; // rust
