@@ -6,11 +6,11 @@ _variables.scss, _atoms.scss are where you would make most of the changes to con
 Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Flex:opsz,wght@8..144,100&display=swap');
 
 // variables used throughout the theme
-$font-header: Tapestry;
-$font-paragraph: Tapestry;
+$font-header: 'Righteous', cursive;
+$font-paragraph: 'Roboto Flex', sans-serif;
 $primary: #0D0630; // russian violet
 $secondary: #18314F; // prussian blue
 $accent1: #DDDBF1; // lavender

@@ -4,7 +4,7 @@ VARIABLES
 /*
 _variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
 Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
-@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Flex:opsz,wght@8..144,100&display=swap");
 /***********************************
 ATOMS
 ************************************/
@@ -12,7 +12,7 @@ ATOMS
 _variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
 Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
 h1 {
-  font-family: Tapestry;
+  font-family: "Righteous", cursive;
   font-size: 6em;
   line-height: normal;
   font-weight: normal;
@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  font-family: Tapestry;
+  font-family: "Righteous", cursive;
   font-size: 3.5em;
   line-height: normal;
   font-weight: normal;
@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  font-family: Tapestry;
+  font-family: "Righteous", cursive;
   font-size: 2.25em;
   line-height: normal;
   font-weight: normal;
@@ -36,7 +36,7 @@ h3 {
 }
 
 h4 {
-  font-family: Tapestry;
+  font-family: "Righteous", cursive;
   font-size: 1em;
   line-height: normal;
   font-weight: normal;
@@ -44,7 +44,7 @@ h4 {
 }
 
 p {
-  font-family: Tapestry;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1em;
   line-height: normal;
   font-weight: normal;
