@@ -1,133 +1,486 @@
-/***********************************
-VARIABLES
-************************************/
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* (perspective — distance) / perspective = scaleFactor 
+https://medium.com/@dailyfire/pure-css-parallax-simple-tricks-da102d0ffdb9 
+https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/
+*/
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	border: 0;
+	margin: 0;
+	color: white;
+}
+
+img {
+	width: 100%;
+	max-width:100%;
+}
+
+.page-wrapper {
+	/*
+	bbackground: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+
+	bbackground: linear-gradient(black, blue); url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
+
+	bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) linear-gradient(black, blue);
+
+	background-color: linear-gradient(transparent, black, blue);
+
+	bbackground-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+	*/
+
+	padding: 15% 0 0 0;
+	background: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png");
+	height: 100vh;
+	overflow-y: auto; /* scroll wrapper not the body */
+    overflow-x: hidden;
+}
+.intro {
+	background-image: url("images/mountain.png");
+	background-size: 100% 100%;	
+}
+.main {
+	background-color: #157e80ff; /* mountain base*/
+}
 /*
-_variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
-Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
-@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Flex:opsz,wght@8..144,100&display=swap");
-/***********************************
-ATOMS
-************************************/
-/*
-_variables.scss, _atoms.scss are where you would make most of the changes to convert this code to your styles. 
-Feel free to change as much as you need those files. In some cases after you review them it might be easiest to just remove all the contents and start fresh. */
-h1 {
-  font-family: "Righteous", cursive;
-  font-size: 6em;
-  line-height: normal;
-  font-weight: normal;
-  letter-spacing: normal;
+.main .explanation {
+	background-image: url("images/trees.png");
+	background-size: 100% 100%;	
+}
+.main .participation {
+	background-image: url("images/trees.png");
+	background-size: 100% 100%;	
+}
+.main .benefits {
+	background-image: url("images/trees.png");
+	background-size: 100% 100%;	
+}*/
+.requirements {
+	background-image: url("images/trees.png");
+	background-size: 100% 100%;	
+}
+footer {
+	text-align: center;
+}
+.sidebar {
+	background-color: blue;
+}
+.wrapper {
+	background-image: url("images/camp.png");	
+	background-size: 100% 100%;	
+	display:flex;
+}
+.intro header h1, 
+.intro header h2,
+.summary p,
+.preamble h3, .preamble p,
+.explanation h3, .explanation p,
+.participation h3, .participation p,
+.benefits h3, .benefits p, 
+.requirements h3, .requirements p
+{
+	padding: 0 10%;
 }
 
-h2 {
-  font-family: "Righteous", cursive;
-  font-size: 3.5em;
-  line-height: normal;
-  font-weight: normal;
-  letter-spacing: normal;
+section, div {
+	margin: 0;
 }
 
-h3 {
-  font-family: "Righteous", cursive;
-  font-size: 2.25em;
-  line-height: normal;
-  font-weight: normal;
-  letter-spacing: normal;
+@media only screen and (min-width: 600px) {
+
+.main, .sidebar {
+	background-color: transparent;	
 }
 
-h4 {
-  font-family: "Righteous", cursive;
-  font-size: 1em;
-  line-height: normal;
-  font-weight: normal;
-  letter-spacing: normal;
+.page-wrapper {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black, blue);
+	padding: 15% 0 0 0;
+	perspective: 500px;
 }
 
-p {
-  font-family: "Roboto Flex", sans-serif;
-  font-size: 1em;
-  line-height: normal;
-  font-weight: normal;
-  letter-spacing: normal;
+/* parallax_group */
+.intro, .main, .sidebar, .wrapper {
+	position: relative;
+	height: 100%;
+	transform-style: preserve-3d;
 }
 
-a {
-  color: #DDDBF1;
-  text-decoration: none;
+/***************************************************** 
+INTRO
+*****************************************************/
+.bintro::before {
+	content: "";
+	background: yellow;
+	padding:0 100% 0 0;
 }
-ahover {
-  border-color: #384E77;
+.bintro::after {
+	content: "";
+	background: orange;
+	padding:0 100% 0 0;
 }
-
-/***********************************
-MOLECULES
-************************************/
-/*************************************
-Parts of intro section
-... sky
-*************************************/
-[role=banner] > h1 {
-  text-transform: uppercase;
+.intro {
+	bbackground: black;
+	background-image: url("images/mountain.png");
+	background-size: 100% 100%;	
+	transform: translateZ(-500px)  scale(2.1);
 }
-
-/*************************************
-Parts of main supporting div
-... mountain
-*************************************/
-/*************************************
-Parts of aside
-... campsite / lake
-*************************************/
-/*
-DEFAULT FILE
-
-@use 'variables' as *;
-@use 'atoms';
-
-// use the mixins from the atoms module to compose our molecules. If you prefer the terminology 'blocks' and 'elements' feel free to use it instead!
-//The base styling we made on our atoms (elements) does most of the work...here we would make any modifications on the elements if they need to appear differently in a certain molecule (block)
-[role="banner"] {
-  > h1 {
-    // notice we have to reference the 'atoms' namespace to find our mixins.
-    @include atoms.uppercase($text-light);
-  }
+header {
+	bbackground: yellow;
 }
+bheader h1, bheader h2 {
+	padding: 0 15%;
+}
+/* banner */
+.banner {
+	bbackground: yellow;
+}
+/* summary */
 .summary {
-  @include atoms.uppercase($text-light);
-  padding: 15% 0;
-  p:last-child {
-    @include atoms.divider;
-  }
-  a {
-    color: $text-light; //in this case the link wants to be light instead of the default dark
-  }
+	bbackground: blue;
+	min-height: 100px;
+}
+.bsummary p {
+	padding: 0 15%;
+}
+
+/* preamble */
+/* before
+*****************************************************/
+.bpreamble::before {
+	content: "";
+	background: yellow;
+	padding:0 100% 0 0;
+}
+/* after
+*****************************************************/
+.bpreamble::after {
+	content: "";
+	background: orange;
+	padding:0 100% 0 0;
 }
 .preamble {
-  background: rgba(255, 255, 255, 0.9);
-  color: $text-dark;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
-}*/
-.intro {
-  padding: 5%;
+	bbackground: purple;
+	/* set translateZ in relation to perspective, neg behind, pos in front = farther away moves slower*/
+	min-height: 500px;
+}
+.bpreamble h3, .bpreamble p {
+	padding: 0 15%;
 }
 
+/***************************************************** 
+MAIN MAIN MAIN MAIN MAIN MAIN MAIN
+*****************************************************/
+/* before
+*****************************************************/
+.bmain::before {
+	content: "";
+	background: yellow;
+	padding:0 100% 0 0;
+}
+/* after
+*****************************************************/
+.bmain::after {
+	background: orange;
+	padding:0 100% 0 0;
+}
 .main {
-  padding: 5%;
+	bbackground: blue;
+	background-image: url("images/trees.png");
+    background-size: 100% 100%;		
+	transform: translateZ(-250px)  scale(1.6);
+}
+/* explanation */
+.explanation {
+	bbackground: pink;
+	btransform: translateZ(-250px)  scale(1.6);	
+}
+.bexplanation h3, .bexplanation p {
+	padding: 0 15%;
+}
+/* participation */
+.participation {
+	bbackground: silver;
+}
+.bparticipation h3, .bparticipation p {
+	padding: 0 15%;
+}
+/* benefits */
+.benefits {
+	bbackground: red;
+}
+.bbenefits h3, .bbenefits p {
+	padding: 0 15%;
+}
+/* requirements */
+.requirements {
+	bbackground: gold;
+	margin-top: 100px;
+	background-image: url("images/lake.png");
+    background-size: 100% 100%;
+	min-height: 500px;
+	transform: translateZ(25px)  scale(1); /* creates tree reflection */
+}
+.brequirements h3, .brequirements p {
+	padding: 0 15%;
+}
+/* footer */
+footer {
+	text-align: center;
+	margin-top: 75px;
+	bbackground: black;
+	btransform: translateZ(-250px)  scale(1.6);
+	transform: translateZ(100px)  scale(1.8);
+	display: flex;
+	flex-direction:column;
+	font-size: 1.2em;
 }
 
-* {
-  box-sizing: border-box;
+/***************************************************** 
+SIDEBAR | WRAPPER
+*****************************************************/
+/* before
+*****************************************************/
+.bwrapper::before {
+	content: "";
+	background: yellow;
+	padding:0 100% 0 0;
+}
+/* after
+*****************************************************/
+.bwrapper::after {
+	content: "";
+	background: orange;
+	padding:0 100% 400px 0;
+}
+.sidebar {
+	bbackground: blue;
+}
+.wrapper {
+	bbackground: green;
+	background-image: url("images/camp.png");
+    background-size: 100% 100%;	
+	display: flex;
+}
+/* design-selection */
+.design-selection {
+	bbackground: yellow;
+}
+.design-selection {
+	padding: 0 15%;
+}
+/* design-archives */
+.design-archives {
+	bbackground: orange;
+}
+.design-archives {
+	padding: 0 15%;
+}
+/* zen-resources */
+.zen-resources {
+	bbackground: red;
+}
+.zen-resources {
+	padding: 0 15%;
 }
 
-html {
-  padding: 5%;
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6 {
+	bfloat:left;
 }
 
-body {
-  background-color: #0D0630;
-  margin: 0;
-  padding: 1em;
+
 }
 
-/*# sourceMappingURL=style.css.map */
+
+/* sky * /
+.intro {
+	display: grid;
+	/*grid-template-columns: 1fr 1fr;*/
+}
+/*
+.intro header,
+.intro div {
+	padding: 0 15%;
+}* /
+
+.bintro::after {
+	content: "";
+	background-image:url("images/mountain.png");
+    background-size: 100% 100%;	
+	min-height: 600px;
+}
+
+.intro .preamble {
+	content: "";
+	background-image:url("images/mountain.png");
+    background-size: 100% 100%;	
+	min-height: 100px;
+}
+.preamble {
+    transform: translateZ(-500px)  scale(2); /* 1 + (translateZ * -1) / perspective = scale * /
+    bz-index: 55;
+	height: 100vh;
+}
+
+/* moutain * /
+.main {
+	display: grid;
+	/*min-height:2600px;* /
+}
+
+.main .participation {
+	content: "";
+	background-image:url("images/mountain.png");
+    background-size: 100% 100%;	
+	min-height: 100px;
+}
+.participation {
+    transform: translateZ(-350px)  scale(1.7);
+    bz-index: 55;
+	height: 100vh;
+}
+
+/* trees * /
+.main .explanation {
+	content: "";
+    background-image: url("images/trees.png");
+    background-size: 100% 100%;	
+	min-height: 200px;	
+}
+.explanation {
+    transform: translateZ(-250px)  scale(1.7);
+    bz-index: 55;
+	height: 100vh;
+}
+
+.main div h3,
+.main div p,
+.main footer {
+	padding: 0 15%;
+}
+
+/* lake * /
+.main .requirements {
+	background-image: url("images/lake.png");
+    background-size: 100% 100%;	
+}
+.requirements {
+    /* transform: translateZ(-150px) scale(1.5); * /
+	transform: translateZ(-125) scale(.1);
+    z-index: 110;
+	height: 100vh;
+	min-height:200px;
+	display: inline-block;
+	position: absolute;
+	top: 100;
+	left: 0;	
+}
+
+footer {
+	background: blue;	
+}
+
+
+/* camp * /
+.sidebar {
+	display: grid;
+}
+.sidebar .wrapper {
+	height:1200px;
+	background-image: url("images/camp.png");
+    background-size: 100% 100%;	
+	z-index: 500;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	left: 0;		
+}
+.wrapper {
+    transform: translateZ(-50) scale(1);
+	height: 100%;
+	min-height:1500px;
+}
+
+.wrapper div h3,
+.wrapper div nav,
+.wrapper div ul {
+	padding: 0 15%;
+}
+
+/*
+
+// mountain
+.intro .preamble {
+	background:url("images/mountain.png");
+    background-size: cover;	
+}
+.preamble {
+    transform: translateZ(-500px)  scale(2.1);
+	bz-index: 10;
+	height: 100vh;
+}
+
+// trees
+.main .requirements {
+    background-image: url("images/trees.png");
+    background-size: cover;
+}
+.requirements {
+    transform: translateZ(-150px)  scale(1.6);
+    bz-index: 55;
+	height: 100vh;
+}
+
+// lake
+.sidebar .wrapper {
+	background-image: url("images/lake.png");
+    background-size: cover;
+}
+.wrapper {
+    /* transform: translateZ(-150px) scale(1.5); * /
+	transform: translateZ(-50) scale(1.1);
+    z-index: 110;
+	height: 100vh;
+	min-height:500px;
+}
+
+// camp
+.sidebar .design-selection {
+	height:1200px;
+	background-image: url("images/camp.png");
+    background-size: cover;
+	bposition:absolute;
+	bbottom:0;
+	bleft:0;
+	z-index: 500;
+}
+.design-selection {
+    transform: translateZ(250) scale(.5);
+    bz-index: 120;
+	height: 100%;
+	min-height:1500px;
+}
+
+.bwrapper::after {
+	content:"-";
+	line-height:0em;
+	font-size: .1px;
+	background-image:linear-gradient(transparent, green, blue, #151c30ff);
+	bheight:1200px;
+	bbackground-image: url("images/camp.png");
+    bbackground-size: cover;	
+	padding:100% 100% 0 0;
+	z-index: -40;
+}
+*/
