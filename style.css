@@ -104,7 +104,7 @@ section, div {
 }
 
 .page-wrapper {
-	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black, blue);
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black 60%, blue);
 	padding: 15% 0 0 0;
 	perspective: 500px;
 }
