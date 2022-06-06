@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Flex&display=swap');
+
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 
@@ -11,6 +14,13 @@
 https://medium.com/@dailyfire/pure-css-parallax-simple-tricks-da102d0ffdb9 
 https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/
 */
+
+:root {
+	--font-header: 'Righteous';
+	--font-paragraph: 'Roboto Flex';
+	--light: green;
+}
+
 * {
 	margin:0;
 	padding:0;
@@ -20,6 +30,21 @@ html, body {
 	border: 0;
 	margin: 0;
 	color: white;
+}
+
+body, a {
+	cursor: url("https://nataliagray.github.io/WDD331-group2/images/flashlight.png"), auto;
+}
+
+h1, h2, h3 {
+	font-family: var(--font-header);
+	font-family: 'Emilys Candy';
+	font-size: 2em;
+	color: var(--light);
+}
+p {
+	font-family: var(--font-paragraph);
+	bcolor: blue;
 }
 
 img {
@@ -45,6 +70,7 @@ img {
 	height: 100vh;
 	overflow-y: auto; /* scroll wrapper not the body */
     overflow-x: hidden;
+	z-index: -10;
 }
 .intro {
 	background-image: url("images/mountain.png");
@@ -95,6 +121,22 @@ footer {
 
 section, div {
 	margin: 0;
+}
+
+/***************************************************** 
+GLOW
+*****************************************************/
+@keyframes glow {
+	from {text-shadow:0px 0px 5px #fff,0px 0px 5px #614ad3;}
+	to {text-shadow:0px 0px 15px #fff,0px 0px 15px #614ad3;}
+}
+
+h1:hover, h2:hover, h3:hover, p:hover {
+	color: yellow;
+	animation-name:glow;	
+	animation-duration:3s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
 }
 
 @media only screen and (min-width: 600px) {
@@ -298,7 +340,6 @@ SIDEBAR | WRAPPER
 	bfloat:left;
 }
 
-
 /***************************************************** 
 ANIMATED SKY
 *****************************************************/
@@ -353,8 +394,7 @@ ANIMATED SKY
 	animation:move-background 150s linear infinite;
 }
 
-
-} /* end media query */
+} /* end of media query */
 
 
 /* sky * /
