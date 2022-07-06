@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Flex&display=swap');
 
 /* css Zen Garden default style v1.02 */
@@ -32,15 +32,12 @@ html, body {
 	color: white;
 }
 
-body, a {
-	cursor: url("https://nataliagray.github.io/WDD331-group2/images/flashlight.png"), auto;
-}
 
 h1, h2, h3 {
 	font-family: var(--font-header);
-	font-family: 'Emilys Candy';
+	font-family: 'Paytone One';
 	font-size: 2em;
-	color: var(--light);
+	color: #E7E6F7;
 }
 p {
 	font-family: var(--font-paragraph);
@@ -71,6 +68,7 @@ img {
 	overflow-y: auto; /* scroll wrapper not the body */
     overflow-x: hidden;
 	z-index: -10;
+
 }
 .intro {
 	background-image: url("images/mountain.png");
@@ -94,6 +92,8 @@ img {
 }*/
 .requirements {
 	background-image: url("images/trees.png");
+	position: relative;
+	top: -150px;
 	background-size: 100% 100%;	
 }
 footer {
@@ -103,7 +103,7 @@ footer {
 	background-color: blue;
 }
 .wrapper {
-	background-image: url("images/camp.png");	
+	background-image: url("images/camp2.png");	
 	background-size: 100% 100%;	
 	display:flex;
 }
@@ -126,17 +126,28 @@ section, div {
 /***************************************************** 
 GLOW
 *****************************************************/
+
+.preamble {
+	opacity: 0.3;
+	transition: 2s;
+}
 @keyframes glow {
-	from {text-shadow:0px 0px 5px #fff,0px 0px 5px #614ad3;}
-	to {text-shadow:0px 0px 15px #fff,0px 0px 15px #614ad3;}
+	0% {
+		text-shadow:0px 0px 0px #fff,0px 0px 0px #E7E6F7;
+		opacity: 0.3;
+		}
+	100% {
+		text-shadow:0px 0px 2px #fff,0px 0px 2px #E7E6F7;
+		opacity:  0.9;
+	}
 }
 
-h1:hover, h2:hover, h3:hover, p:hover {
-	color: yellow;
+.preamble:hover {
 	animation-name:glow;	
-	animation-duration:3s;
-	animation-iteration-count:infinite;
-	animation-direction:alternate;
+	animation-duration:1s;
+	animation-fill-mode: forwards;
+	animation-direction:ease-in;
+	cursor: url("https://nataliagray.github.io/WDD331-group2/images/flashlight.png"), auto;
 }
 
 @media only screen and (min-width: 600px) {
@@ -146,7 +157,7 @@ h1:hover, h2:hover, h3:hover, p:hover {
 }
 
 .page-wrapper {
-	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black 60%, blue);
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(#000103 55%, #0D0630);
 	padding: 15% 0 0 0;
 	perspective: 500px;
 }
@@ -171,15 +182,54 @@ INTRO
 	background: orange;
 	padding:0 100% 0 0;
 }
+
 .intro {
 	bbackground: black;
-	background-image: url("images/mountain.png");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/mountain.png");
+	position:  relative;
+	top:  1750px;
 	background-size: 100% 100%;	
 	transform: translateZ(-500px)  scale(2.1);
 }
+
+/*Styling and positioning the first two headlines*/
+h1 {
+	font-size: 70px;
+	text-align: center;
+	letter-spacing: 2px;
+	opacity: 0.8;
+	text-shadow:0px 0px 2px #fff,0px 0px 2px #E7E6F7;
+}
+
+h2 {
+	padding-top:  50px;
+	font-style: italic;
+	text-align:  center;
+	letter-spacing: 2px;
+	opacity: 0.8;
+	text-shadow:0px 0px 2px #fff,0px 0px 2px #E7E6F7;
+}
+/*Styling and positioning the summary, links within the summary and the header. Had to be done seperately for specificity*/
+.summary {
+	position: relative;
+	text-align: center;
+	font-style: italic;
+	color: #C6D2ED;
+	top: -750px;
+}
+.summary a {
+	text-align: center;
+	font-style: italic;
+	color: #C6D2ED;
+	font-weight:  bold;
+}
+
 header {
 	bbackground: yellow;
+	position:  relative;
+	top: -760px;
 }
+
 bheader h1, bheader h2 {
 	padding: 0 15%;
 }
@@ -187,6 +237,7 @@ bheader h1, bheader h2 {
 .banner {
 	bbackground: yellow;
 }
+
 /* summary */
 .summary {
 	bbackground: blue;
@@ -204,6 +255,27 @@ bheader h1, bheader h2 {
 	background: yellow;
 	padding:0 100% 0 0;
 }
+
+.preamble p::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  shape-outside: polygon(
+    0 0,
+    98% 0,
+    50% 6%,
+    23.4% 17.3%,
+    6% 32.6%,
+    0 50%,
+    6% 65.6%,
+    23.4% 82.7%,
+    50% 94%,
+    98% 100%,
+    0 100%
+  );
+  shape-margin: 7%;
+}
+
 /* after
 *****************************************************/
 .bpreamble::after {
@@ -211,11 +283,30 @@ bheader h1, bheader h2 {
 	background: orange;
 	padding:0 100% 0 0;
 }
+
+.preamble p {
+	padding: 0;
+	line-height: 1.25;
+
+}
 .preamble {
 	bbackground: purple;
 	/* set translateZ in relation to perspective, neg behind, pos in front = farther away moves slower*/
 	min-height: 500px;
+	width:600px;
+  	height: 700px;
+  	top: -500px;
+  	left: 29%;
+  	position: relative;
+  	text-align: center;
+  	margin: 0;
 }
+
+.preamble h3 {
+	line-height: -10px;
+	margin-bottom:  15px;
+}
+
 .bpreamble h3, .bpreamble p {
 	padding: 0 15%;
 }
@@ -239,13 +330,27 @@ MAIN MAIN MAIN MAIN MAIN MAIN MAIN
 .main {
 	bbackground: blue;
 	background-image: url("images/trees.png");
+	position:  relative;
+	top: 1650px;
     background-size: 100% 100%;		
 	transform: translateZ(-250px)  scale(1.6);
+}
+
 }
 /* explanation */
 .explanation {
 	bbackground: pink;
 	btransform: translateZ(-250px)  scale(1.6);	
+	position: relative;
+	top: -210px;
+	width:  900px;
+	opacity: 0.9;
+}
+
+.explanation h3 {
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+	position: relative;
 }
 .bexplanation h3, .bexplanation p {
 	padding: 0 15%;
@@ -253,6 +358,25 @@ MAIN MAIN MAIN MAIN MAIN MAIN MAIN
 /* participation */
 .participation {
 	bbackground: silver;
+	position:  relative;
+	top: -220px;
+	left: 40%;
+	width:  900px;
+	opacity: 0.9;
+	text-align: right;
+
+}
+
+.participation a {
+	color:  #E7E6F7;
+	font-weight:  bold;
+}
+
+.participation h3 {
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+	position: relative;
+
 }
 .bparticipation h3, .bparticipation p {
 	padding: 0 15%;
@@ -260,19 +384,51 @@ MAIN MAIN MAIN MAIN MAIN MAIN MAIN
 /* benefits */
 .benefits {
 	bbackground: red;
+	position: relative;
+	padding-left: 30px;
+	width: 600px;
+	top: -220px;
 }
 .bbenefits h3, .bbenefits p {
 	padding: 0 15%;
 }
 /* requirements */
+
 .requirements {
 	bbackground: gold;
 	margin-top: 100px;
 	background-image: url("images/lake.png");
     background-size: 100% 100%;
 	min-height: 500px;
+	top:  -350px;
 	transform: translateZ(25px)  scale(1); /* creates tree reflection */
+	text-align: center;
 }
+
+.requirements > * {
+
+	position:  relative;
+	top: 550px;
+}
+
+.requirements a {
+	color:  #E7E6F7;
+	font-weight:  bold;
+}
+
+.requirements p {
+
+	width: 700px;
+	position: relative;
+	left:  15%;
+	text-align: center;
+	opacity: 0.8;
+}
+
+.requirements h3 {
+	opacity:  0.8;
+}
+
 .brequirements h3, .brequirements p {
 	padding: 0 15%;
 }
@@ -310,20 +466,30 @@ SIDEBAR | WRAPPER
 }
 .wrapper {
 	bbackground: green;
-	background-image: url("images/camp.png");
+	background-image: url("images/camp2.png");
+	position: relative;
+	top: 2150px;
+	padding-bottom: 580px;
     background-size: 100% 100%;	
 	display: flex;
 }
 /* design-selection */
-.design-selection {
-	bbackground: yellow;
+.design-selection a {
+	color:  #E7E6F7;
+	font-weight:  bold;
 }
 .design-selection {
-	padding: 0 15%;
+	margin: 0;
+	padding: 0;
+	position:  relative;
+	left: 70%;
+	top: 700px;
+
 }
 /* design-archives */
-.design-archives {
-	bbackground: orange;
+.design-archives a {
+	color:  #E7E6F7;
+	font-weight:  bold;
 }
 .design-archives {
 	padding: 0 15%;
@@ -379,7 +545,7 @@ ANIMATED SKY
 	content:"";
 	width:10000px;
 	height: 100%;
-	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png"),  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png");
+	background-image: /*url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png"),*/  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png");
 	background-size: 1000px 1000px;
 	position: absolute;
 	right: 0;
