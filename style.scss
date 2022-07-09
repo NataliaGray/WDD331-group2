@@ -1,17 +1,132 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
+//@use "mixins" as m;
 @use 'atoms';
+@use 'mobile';
 @use 'molecules';
-@use 'organisms' as o;
+@use 'organisims';
+/* https://nataliagray.github.io/WDD331-group2/ */
 
-* {
-  box-sizing: border-box;
-}
-html {
-  padding: 5%;
+
+@media only screen and (min-width: 600px) {
+// fire
+/* https://codepen.io/Guilh/pen/ngVeKv */
+  .wrapper::after {
+    content: "";
+    bwidth: 100px;
+    bheight: 100px;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    position: absolute;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 100px dotted $campfire-yellow; /* change shape of fire, solid, dashed */
+    filter: blur(4px);
+    bbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $campfire-yellow), color-stop(100%, red));
+    animation: fire 2s linear infinite;
+    btransform: rotate(-45deg);
+    banimation: fire 5s ease-in-out infinite alternate;
+    b-webkit-animation: fire 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes fire {
+    0% {
+        bcolor: yellow;
+        opacity: .4;
+    }
+    50% {
+      transform: scale(1.1);
+      bcolor: orange;
+      opacity: .6;
+    }
+    100% {
+        bcolor: blue;
+        opacity: .4;
+    }
+  }
+
+  .zen-resources::after {
+    content: " Dana, Natayla, JC ";
+    font-family: $font-header;
+    width: 500px;
+    position: relative;
+    bottom: -425px;
+    left: -235px;
+    bmargin-left: 44%;
+    transform: rotate(15deg);
+    border: 7px solid brown;
+    border-radius: 5px;
+    padding: 0 10px;
+    background: linear-gradient( $brownl 50%, $brownd );
+  }
 }
 
-body {
-  background-color: $primary;
-  margin: 0;
-  padding: 1em;
+/*
+@keyframes fire2 {
+  0% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+  }
+  100% {
+      transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+  }
 }
+
+baside::after{
+  content: "";
+  position: relative;
+  display: block;
+  bbackground: rgba(255, 255, 255, 0.2);
+  background: $campfire-yellow;
+  animation: animate 2s linear infinite;
+  bottom: 20px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  banimation-delay: 0s;
+}
+
+@keyframes animate {
+  0%{
+      btransform: translateY(0) rotate(0deg);
+      transform: scale(1.0)translatex(-5px);
+      color: yellow;
+      opacity: .4;
+  }
+
+  50%{
+    transform: scale(1.1);
+    transform: translatex(5px);
+    color: orange;
+    bopacity: .6;
+  }
+
+  100%{
+      btransform: translateY(-100px) rotate(720deg);
+      transform: scale(1.0) translatex(-5px);
+      color: red;
+      bopacity: .8;
+  }
+}
+
+/*
+.bwrapper::after {
+  content: "";
+  position: relative;
+  bottom: 5%;
+  left: -19%;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 100px solid $campfire-yellow;
+  banimation: color 9s infinite linear;
+}
+  
+@keyframes color {
+	0%   { background: #33CCCC; }
+	20%  { background: #33CC36; }
+	40%  { background: #B8CC33; }
+	60%  { background: #FCCA00; }
+	80%  { background: #33CC36; }
+	100% { background: #33CCCC; }
+}*/

@@ -1,0 +1,39 @@
+/***********************************
+MOBILE
+************************************/
+.intro {
+  background-image: url("images/mountain.png");
+  background-size: 100% 100%;
+  padding: 1em;
+}
+
+.summary {
+  margin-bottom: 1em;
+  text-align: center;
+  font-style: italic;
+}
+
+.main {
+  background-image: url("images/trees.png");
+  background-size: 100% 100%;
+  padding: 1em;
+}
+
+footer {
+  background-image: url("images/lake.png");
+  background-size: 100% 100%;
+  padding: 1em;
+}
+
+aside {
+  padding: 1em;
+}
+
+.wrapper {
+  background-image: url("images/camp.png");
+  background-size: 100% 100%;
+}
+
+ul {
+  list-style: none;
+}/*# sourceMappingURL=mobile.css.map */
