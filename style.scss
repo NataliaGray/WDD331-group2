@@ -12,8 +12,6 @@
 /* https://codepen.io/Guilh/pen/ngVeKv */
   .wrapper::after {
     content: "";
-    bwidth: 100px;
-    bheight: 100px;
     position: absolute;
     top: 70%;
     left: 45%;
@@ -22,11 +20,46 @@
     border-right: 45px solid transparent;
     border-bottom: 100px dotted $campfire-yellow; /* change shape of fire, solid, dashed */
     filter: blur(4px);
-    bbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $campfire-yellow), color-stop(100%, red));
+    animation: fire 3s linear infinite;
+  }
+
+  // red
+  .design-selection::before, .design-selection::after {
+    content: "";
+    position: absolute;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 100px solid $campfire-red; /* change shape of fire, solid, dashed */
+    filter: blur(4px);
+  }
+  .design-selection::before {
+    top: 70%;
+    left: 48%;
     animation: fire 2s linear infinite;
-    btransform: rotate(-45deg);
-    banimation: fire 5s ease-in-out infinite alternate;
-    b-webkit-animation: fire 5s ease-in-out infinite alternate;
+  }
+  .design-selection::after {
+    top: 70%;
+    left: 45%;
+    animation: fire 1s linear infinite;
+  }
+
+  // blue
+  .select::before, .select::after {
+    content: "";
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 100px solid $campfire-blue; /* change shape of fire, solid, dashed */
+    filter: blur(4px);
+    animation: fire 1s linear infinite;
+  }
+  .select::before {
+    top: 500px;
+    left: 110%;
+  }
+  .select::after {
+    top: 500px;
+    left: 145%;
   }
 
   @keyframes fire {
@@ -45,88 +78,41 @@
     }
   }
 
+  /*
   .zen-resources::after {
-    content: " Dana, Natayla, JC ";
+    content: " Dana, Natalya, JC ";
     font-family: $font-header;
     width: 500px;
     position: relative;
     bottom: -425px;
-    left: -235px;
-    bmargin-left: 44%;
+    left: -240px;
     transform: rotate(15deg);
     border: 7px solid brown;
     border-radius: 5px;
     padding: 0 10px;
     background: linear-gradient( $brownl 50%, $brownd );
+  }*/
+
+  .zen-resources::before, .zen-resources:after {
+    content: "(............................()";
+    font-family: $font-header;
+    color: brown;
+    background: linear-gradient( $brownd 50%, $brownl );
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .zen-resources::before {
+    top: 480px;
+    left: -230px;
+    transform: rotate(10deg);
+
+  }
+  .zen-resources:after {
+    top: 400px;
+    left: -235px;
+    transform: rotate(-10deg);
+
   }
 }
-
-/*
-@keyframes fire2 {
-  0% {
-      transform: scale(1.0);
-      -webkit-transform: scale(1.0);
-  }
-  100% {
-      transform: scale(1.3);
-      -webkit-transform: scale(1.3);
-  }
-}
-
-baside::after{
-  content: "";
-  position: relative;
-  display: block;
-  bbackground: rgba(255, 255, 255, 0.2);
-  background: $campfire-yellow;
-  animation: animate 2s linear infinite;
-  bottom: 20px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  banimation-delay: 0s;
-}
-
-@keyframes animate {
-  0%{
-      btransform: translateY(0) rotate(0deg);
-      transform: scale(1.0)translatex(-5px);
-      color: yellow;
-      opacity: .4;
-  }
-
-  50%{
-    transform: scale(1.1);
-    transform: translatex(5px);
-    color: orange;
-    bopacity: .6;
-  }
-
-  100%{
-      btransform: translateY(-100px) rotate(720deg);
-      transform: scale(1.0) translatex(-5px);
-      color: red;
-      bopacity: .8;
-  }
-}
-
-/*
-.bwrapper::after {
-  content: "";
-  position: relative;
-  bottom: 5%;
-  left: -19%;
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-bottom: 100px solid $campfire-yellow;
-  banimation: color 9s infinite linear;
-}
-  
-@keyframes color {
-	0%   { background: #33CCCC; }
-	20%  { background: #33CC36; }
-	40%  { background: #B8CC33; }
-	60%  { background: #FCCA00; }
-	80%  { background: #33CC36; }
-	100% { background: #33CCCC; }
-}*/

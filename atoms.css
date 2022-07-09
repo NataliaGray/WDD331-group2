@@ -1,7 +1,7 @@
 /***********************************
 VARIABLES
 ************************************/
-@import url("https://fonts.googleapis.com/css2?family=Paytone+One+Poppin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppin&display=swap");
 /***********************************
 ATOMS
 ************************************/
@@ -52,5 +52,5 @@ h2 {
 }
 
 p {
-  font-family: "One", sans-serif;
+  font-family: "Poppin", sans-serif;
 }/*# sourceMappingURL=atoms.css.map */

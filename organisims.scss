@@ -15,6 +15,9 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
     }
 }
 
+
+@media only screen and (min-width: 600px) {
+
     // night sky twinkle (x, y, z)
     @keyframes move-background {
         from {
@@ -63,7 +66,7 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
         top: 0;
         bottom: 0;
         z-index: -1;
-        
+
         -moz-animation:move-background 150s linear infinite;
         -ms-animation:move-background 150s linear infinite;
         -o-animation:move-background 150s linear infinite;
@@ -72,10 +75,6 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
     }
 
 
-
-@media only screen and (min-width: 600px) {
-
-    // NIGHT SKY GOES HERE ...
 
     // fireflies
     ul, li a {
