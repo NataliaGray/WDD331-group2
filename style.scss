@@ -7,112 +7,13 @@
 /* https://nataliagray.github.io/WDD331-group2/ */
 
 
+body {
+  background-image: linear-gradient( $black 50%, $blue ); 
+}
+.page-wrapper {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
+}
+
 @media only screen and (min-width: 600px) {
-// fire
-/* https://codepen.io/Guilh/pen/ngVeKv */
-  .wrapper::after {
-    content: "";
-    position: absolute;
-    top: 70%;
-    left: 45%;
-    position: absolute;
-    border-left: 45px solid transparent;
-    border-right: 45px solid transparent;
-    border-bottom: 100px dotted $campfire-yellow; /* change shape of fire, solid, dashed */
-    filter: blur(4px);
-    animation: fire 3s linear infinite;
-  }
 
-  // red
-  .design-selection::before, .design-selection::after {
-    content: "";
-    position: absolute;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 100px solid $campfire-red; /* change shape of fire, solid, dashed */
-    filter: blur(4px);
-  }
-  .design-selection::before {
-    top: 70%;
-    left: 48%;
-    animation: fire 2s linear infinite;
-  }
-  .design-selection::after {
-    top: 70%;
-    left: 45%;
-    animation: fire 1s linear infinite;
-  }
-
-  // blue
-  .select::before, .select::after {
-    content: "";
-    position: absolute;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 100px solid $campfire-blue; /* change shape of fire, solid, dashed */
-    filter: blur(4px);
-    animation: fire 1s linear infinite;
-  }
-  .select::before {
-    top: 500px;
-    left: 110%;
-  }
-  .select::after {
-    top: 500px;
-    left: 145%;
-  }
-
-  @keyframes fire {
-    0% {
-        bcolor: yellow;
-        opacity: .4;
-    }
-    50% {
-      transform: scale(1.1);
-      bcolor: orange;
-      opacity: .6;
-    }
-    100% {
-        bcolor: blue;
-        opacity: .4;
-    }
-  }
-
-  /*
-  .zen-resources::after {
-    content: " Dana, Natalya, JC ";
-    font-family: $font-header;
-    width: 500px;
-    position: relative;
-    bottom: -425px;
-    left: -240px;
-    transform: rotate(15deg);
-    border: 7px solid brown;
-    border-radius: 5px;
-    padding: 0 10px;
-    background: linear-gradient( $brownl 50%, $brownd );
-  }*/
-
-  .zen-resources::before, .zen-resources:after {
-    content: "(............................()";
-    font-family: $font-header;
-    color: brown;
-    background: linear-gradient( $brownd 50%, $brownl );
-    border-radius: 10px;
-    display: inline-block;
-    position: relative;
-  }
-
-  .zen-resources::before {
-    top: 480px;
-    left: -230px;
-    transform: rotate(10deg);
-
-  }
-  .zen-resources:after {
-    top: 400px;
-    left: -235px;
-    transform: rotate(-10deg);
-
-  }
 }

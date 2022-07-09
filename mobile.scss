@@ -1,10 +1,16 @@
 /***********************************
 MOBILE
 ************************************/
+@use "variables" as *; //this puts all the variables in the global namespace.
 
+.page-wrapper {
+    bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient( $black 50%, $blue );   
+    bheight: 100%;
+    bheight: 100vh; 
+}
 .intro {
-    background-image: url("images/mountain.png");
-    background-size: 100% 100%;
+    bbackground-image: url("images/mountain.png");
+    bbackground-size: 100% 100%;
     padding: 1em;	
   }
 .summary {
@@ -13,21 +19,21 @@ MOBILE
     font-style: italic;
 }
 .main {
-    background-image: url("images/trees.png");
-    background-size: 100% 100%;		
+    bbackground-image: url("images/trees.png");
+    bbackground-size: 100% 100%;		
     padding: 1em;	
 }
 footer {
-    background-image: url("images/lake.png");
-    background-size: 100% 100%;
+    bbackground-image: url("images/lake.png");
+    bbackground-size: 100% 100%;
     padding: 1em;	
 }
 aside {
     padding: 1em;	
 }
 .wrapper {
-    background-image: url("images/camp.png");
-    background-size: 100% 100%;	
+    bbackground-image: url("images/camp.png");
+    bbackground-size: 100% 100%;	
 }
 ul {
     list-style: none;

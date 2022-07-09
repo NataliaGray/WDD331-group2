@@ -1,9 +1,19 @@
 /***********************************
+VARIABLES
+************************************/
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppin&display=swap");
+/***********************************
 MOBILE
 ************************************/
+.page-wrapper {
+  bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(#111217 50%, blue);
+  bheight: 100%;
+  bheight: 100vh;
+}
+
 .intro {
-  background-image: url("images/mountain.png");
-  background-size: 100% 100%;
+  bbackground-image: url("images/mountain.png");
+  bbackground-size: 100% 100%;
   padding: 1em;
 }
 
@@ -14,14 +24,14 @@ MOBILE
 }
 
 .main {
-  background-image: url("images/trees.png");
-  background-size: 100% 100%;
+  bbackground-image: url("images/trees.png");
+  bbackground-size: 100% 100%;
   padding: 1em;
 }
 
 footer {
-  background-image: url("images/lake.png");
-  background-size: 100% 100%;
+  bbackground-image: url("images/lake.png");
+  bbackground-size: 100% 100%;
   padding: 1em;
 }
 
@@ -30,8 +40,8 @@ aside {
 }
 
 .wrapper {
-  background-image: url("images/camp.png");
-  background-size: 100% 100%;
+  bbackground-image: url("images/camp.png");
+  bbackground-size: 100% 100%;
 }
 
 ul {
