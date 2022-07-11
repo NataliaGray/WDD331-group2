@@ -6,14 +6,61 @@
 @use 'organisims';
 /* https://nataliagray.github.io/WDD331-group2/ */
 
-
 body {
-  background-image: linear-gradient( $black 50%, #101D42 ); 
+  bbackground-image: linear-gradient( $black 50%, $sky-blue ); 
 }
 .page-wrapper {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
+  bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
 }
 
-@media only screen and (min-width: 600px) {
 
+// tablet
+@media only screen and (min-width: 481px) {
+  .main {
+    bheight: 1300px;
+  }
 }
+// laptop
+@media only screen and (min-width: 769px) {
+  .main {
+    height: 210%;
+  }
+}
+// laptop
+@media only screen and (min-width: 900px) {
+  .main {
+    height: 200%; 
+  }
+}
+// desktop (Nest Hub) ... screen must be 1024 or larger
+@media only screen and (min-width: 1024px) {
+  .main {
+    height: 170%;
+  }
+}
+// tv
+@media only screen and (min-width: 1248px) {
+  .main {
+    height: 250%;
+  }
+  .explanation, .benefits {
+    width: 50%;
+  }
+
+  .participation, .requirements {
+    text-align: right;
+    position: relative;
+    left: 40%;
+    width: 60%; 
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .main {
+    height: 1050px;  
+  }
+}
+
+.design-selection, .select {
+  bpointer-events: none;
+}
+

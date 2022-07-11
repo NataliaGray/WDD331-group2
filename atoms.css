@@ -17,12 +17,12 @@ html, body {
 }
 
 body {
-  background: #111217;
+  background-image: linear-gradient(black 50%, blue);
 }
 
 body, a {
   cursor: url("https://nataliagray.github.io/WDD331-group2/images/flashlight.png"), auto;
-  color: #C6D2ED;
+  color: #DDDBF1;
 }
 
 /***********************************
@@ -36,7 +36,6 @@ h1, h2, h3 {
 }
 
 h1 {
-  /*b@include m.set-font-header(6em);*/
   font-size: 70px;
   text-align: center;
   letter-spacing: 2px;

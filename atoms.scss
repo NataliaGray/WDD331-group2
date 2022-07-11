@@ -13,7 +13,7 @@ html, body {
 	margin: 0;
 }
 body {
-    background: $black;
+    background-image: linear-gradient( $black 50%, $sky-blue );
 }
 body, a {
 	cursor: url("https://nataliagray.github.io/WDD331-group2/images/flashlight.png"), auto;
@@ -29,7 +29,6 @@ h1, h2, h3 {
     opacity: 0.3;
 }
 h1 {
-    /*b@include m.set-font-header(6em);*/
     font-size: 70px;
     text-align: center;
     letter-spacing: 2px;

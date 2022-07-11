@@ -3,19 +3,26 @@ MOLECULES
 ************************************/
 @use "variables" as *; //this puts all the variables in the global namespace.
 
+
 // parallax
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
+    .page-wrapper {
+        background: red;
+    }
+}
+
+// parallax
+@media only screen and (min-width: 769px) {
     .page-wrapper {
       padding: 15% 0 0 0;
-      bbackground: black url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png");
-      bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient( $black 50%, $blue );
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient( $black 50%, $sky-blue );
       height: 100vh;
       overflow-y: auto; /* scroll wrapper not the body */
       overflow-x: hidden;
       z-index: -10;
       perspective: 500px;
     }
-  
+
     /* parallax_group */
     .intro, .main, .sidebar, .wrapper {
       position: relative;
@@ -40,6 +47,8 @@ MOLECULES
         margin-bottom: 10em;
         text-align: center;
         font-style: italic;
+        max-width: 80%;
+        margin: 0 auto;        
     }
     .preamble {
         text-align: center;
@@ -62,15 +71,6 @@ MOLECULES
     .main div {
         margin-bottom: 1em;
     }
-    .explanation, .benefits {
-        bmargin-right: 40%;
-        bwidth: 50%;
-    }
-    .participation, .requirements {
-        bmargin-left: 30%;
-        bwidth: 50%;
-        text-align: right;
-    }
     // lake
     footer {
         margin-bottom: 100px;
@@ -79,13 +79,14 @@ MOLECULES
         height: 350px;
         width: 100wh;
         position: relative;
-        top: -1000;
+        bottom: 70%;
         text-align: center;
         display: flex;
         gap: 2em;
         justify-content: center;
-        transform: translateZ(150px)  scale(.9); /* creates tree reflection */
-    }     
+        transform: translateZ(150px)  scale(.9);
+    }
+
     footer a {
         padding: 0;
         position: relative;
@@ -110,14 +111,13 @@ MOLECULES
         position: relative;
     }
     .select {
-        bottom: 100px;
-        left: -75px;
-    }
-    .archives {
-        bottom: 150px;
-        left: 175px;
-    }        
-    .resources {
-        bottom: 100px;
-    }
+        bottom: -60%;
+        left:-12px;
+      }
+      .archives {
+        bottom: -60%;
+      }        
+      .resources {
+        bottom: -60%;
+      }
   }

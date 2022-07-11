@@ -5,15 +5,7 @@ VARIABLES
 /***********************************
 MOBILE
 ************************************/
-.page-wrapper {
-  bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(#111217 50%, blue);
-  bheight: 100%;
-  bheight: 100vh;
-}
-
 .intro {
-  bbackground-image: url("images/mountain.png");
-  bbackground-size: 100% 100%;
   padding: 1em;
 }
 
@@ -24,24 +16,15 @@ MOBILE
 }
 
 .main {
-  bbackground-image: url("images/trees.png");
-  bbackground-size: 100% 100%;
   padding: 1em;
 }
 
 footer {
-  bbackground-image: url("images/lake.png");
-  bbackground-size: 100% 100%;
   padding: 1em;
 }
 
 aside {
   padding: 1em;
-}
-
-.wrapper {
-  bbackground-image: url("images/camp.png");
-  bbackground-size: 100% 100%;
 }
 
 ul {
