@@ -102,7 +102,7 @@ p {
 }
 
 .summary {
-  margin-bottom: 9em;
+  margin-bottom: 11em;
   text-align: center;
   font-style: italic;
 }
@@ -116,8 +116,9 @@ p {
 footer {
   bbackground-image: url("images/lake.png");
   bbackground-size: 100% 100%;
-  padding: 1em;
+  padding: 1.5em;
   font-weight: bold;
+  text-align: center;
 }
 
 footer a {
@@ -138,6 +139,24 @@ aside {
 
 ul {
   list-style: none;
+}
+
+.design-archives li, .zen-resources li,.design-selection li {
+
+  margin: -9px;
+
+}
+
+.design-archives, .zen-resources, .design-selection {
+
+  text-align: center;
+
+}
+
+.design-archives {
+
+  font-weight: bold;
+  margin: 30px;
 }
 
 /***********************************
@@ -259,6 +278,7 @@ MOLECULES
     top: -1000;
     text-align: center;
     display: flex;
+    font-weight: unset;
     gap: 2em;
     justify-content: center;
     transform: translateZ(150px) scale(0.9);
