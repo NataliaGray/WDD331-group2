@@ -4,21 +4,14 @@
 @use 'mobile';
 @use 'molecules';
 @use 'organisims';
+
 /* https://nataliagray.github.io/WDD331-group2/ */
-
-body {
-  bbackground-image: linear-gradient( $black 50%, $sky-blue ); 
-}
-.page-wrapper {
-  bbackground: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
-}
-
-
+/***********************************
+MEDIA QUERIES
+************************************/
 // tablet
 @media only screen and (min-width: 481px) {
-  .main {
-    bheight: 1300px;
-  }
+  /* TODO */
 }
 // laptop
 @media only screen and (min-width: 769px) {
@@ -56,11 +49,31 @@ body {
 }
 @media only screen and (min-width: 1600px) {
   .main {
-    height: 1050px;  
+    height: 1050px;
   }
 }
 
-.design-selection, .select {
-  bpointer-events: none;
+// ripple text
+.select, .archives, .resources {
+  animation: ripple 4s ease-in infinite;
 }
-
+@keyframes ripple {
+  0% {
+      btransform: rotate(-1deg) skew(20deg);
+      btransform: rotate(-1deg);
+      transform: skew(3deg, 3deg);
+      bletter-spacing: 2px;
+    }
+  50% {
+    btransform: rotate(1deg) skew(-20deg);
+    btransform: rotate(1deg);
+    transform: skew(-3deg, -3deg);
+    bbetter-spacing: 5px;
+  }  
+  100% {
+      btransform: rotate(-1deg) skew(20deg);
+      btransform: rotate(-1deg);
+      transform: skew(3deg, 3deg);
+      bletter-spacing: 2px;
+  }
+}
