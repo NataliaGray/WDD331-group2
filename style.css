@@ -17,7 +17,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(black 50%, blue);
+  background-image: linear-gradient(black 50%, #101D42);
 }
 
 body, a {
@@ -69,12 +69,42 @@ li a {
 /***********************************
 MOBILE
 ************************************/
+h1 {
+
+  font-size: 400%;
+}
+
+h2 {
+
+  font-size: 200%;
+}
+
+h3 {
+
+  margin-bottom: 0.5em;
+}
+
+li a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.page-wrapper {
+
+  font-size: 90%;
+}
+
+p {
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+}
+
 .intro {
   padding: 1em;
 }
 
 .summary {
-  margin-bottom: 1em;
+  margin-bottom: 11em;
   text-align: center;
   font-style: italic;
 }
@@ -84,7 +114,17 @@ MOBILE
 }
 
 footer {
-  padding: 1em;
+  font-weight: bold;
+  padding: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer a {
+
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0.5em;
 }
 
 aside {
@@ -93,6 +133,24 @@ aside {
 
 ul {
   list-style: none;
+}
+
+.design-archives li, .zen-resources li,.design-selection li {
+
+  margin: -9px;
+
+}
+
+.design-archives, .zen-resources, .design-selection {
+
+  text-align: center;
+
+}
+
+.design-archives {
+
+  font-weight: bold;
+  margin: 30px;
 }
 
 /***********************************
@@ -106,10 +164,11 @@ MOLECULES
 @media only screen and (min-width: 769px) {
   .page-wrapper {
     padding: 15% 0 0 0;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black 50%, blue);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black 50%, #101D42);
     height: 100vh;
     overflow-y: auto;
     /* scroll wrapper not the body */
+    font-weight: unset;
     overflow-x: hidden;
     z-index: -10;
     perspective: 500px;
@@ -124,7 +183,7 @@ MOLECULES
 
   .intro {
     padding: 0;
-    background-image: url("images/mountain.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("images/mountain.png");
     background-size: 100% 100%;
     transform: translateZ(-500px) scale(2.1);
     min-height: 800px;
