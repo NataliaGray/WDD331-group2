@@ -3,22 +3,14 @@ MOLECULES
 ************************************/
 @use "variables" as *; //this puts all the variables in the global namespace.
 
-
-// parallax
-@media only screen and (min-width: 769px) {
-    .page-wrapper {
-        background: red;
-    }
-}
-
 // parallax
 @media only screen and (min-width: 769px) {
     .page-wrapper {
       padding: 15% 0 0 0;
-      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient( $black 50%, $sky-blue );
       height: 100vh;
       overflow-y: auto; /* scroll wrapper not the body */
       overflow-x: hidden;
+      font-weight: unset;
       z-index: -10;
       perspective: 500px;
     }
@@ -33,21 +25,18 @@ MOLECULES
     // mountain
     .intro {
       padding: 0;
-      background-image: url("images/mountain.png");
+      background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("images/mountain.png");
       background-size: 100% 100%;	
       transform: translateZ(-500px)  scale(2.1);
-      min-height: 800px;
-      margin-top: 800px;
     }
-      header, .summary {
+    header, .summary {
       position: relative;
-      top: -250px;
     }
     .summary {
         margin-bottom: 10em;
         text-align: center;
         font-style: italic;
-        max-width: 80%;
+        max-width: 600px;
         margin: 0 auto;        
     }
     .preamble {
@@ -58,27 +47,20 @@ MOLECULES
 
     // trees
     .main {
-      padding: 5em;
       background-image: url("images/trees.png");
       background-size: 100% 100%;		
       transform: translateZ(-250px)  scale(1.6);
       display: grid;
-      height: 1050px;
+      &::h3 {
+        margin-left: 5%;
+      }
     }
-    .main div h3, .main div p {
-        margin: 0 50px;
-    }
-    .main div {
-        margin-bottom: 1em;
-    }
+
     // lake
     footer {
-        margin-bottom: 100px;
         background-image: url("images/lake.png");
         background-size: 100% 100%;
-        height: 350px;
         position: relative;
-        bottom: 75%;
         text-align: center;
         display: flex;
         gap: 2em;
@@ -89,7 +71,6 @@ MOLECULES
     footer a {
         padding: 0;
         position: relative;
-        bottom: -80%;
         font-size: 3em;
         text-decoration: none;
     }
@@ -97,7 +78,6 @@ MOLECULES
     // camp
     aside {
         padding: 0;
-        margin-top: 150px;
     }
     .wrapper {
       padding: 0;
@@ -109,14 +89,4 @@ MOLECULES
     .select, .archives, .resources {
         position: relative;
     }
-    .select {
-        bottom: -44%;
-        left:-14px;
-      }
-      .archives {
-        bottom: -58%;
-      }        
-      .resources {
-        bottom: -35%;
-      }
   }

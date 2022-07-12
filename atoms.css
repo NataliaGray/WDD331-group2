@@ -17,12 +17,16 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(black 50%, blue);
+  background-image: linear-gradient(black 50%, #101D42);
 }
 
 body, a {
   cursor: url("https://nataliagray.github.io/WDD331-group2/images/flashlight.png"), auto;
   color: #DDDBF1;
+}
+
+.page-wrapper {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png), linear-gradient(black 50%, #101D42);
 }
 
 /***********************************

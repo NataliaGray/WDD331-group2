@@ -55,7 +55,7 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
     }
     .page-wrapper::before {
         content:"";
-        width:10000px;
+        width:10000px; /* makes movement possible */
         height: 100%;
         background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png");
         background-size: 1000px 1000px;
@@ -171,7 +171,6 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
         }
     }
 
-
     // campfire
     /* https://codepen.io/Guilh/pen/ngVeKv */
     .wrapper {
@@ -182,7 +181,8 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
         content: "";
         position: absolute;
         bottom: 11%;
-        left: 46%;
+        bleft: 46%;
+        left: 47%;
         border-left: 45px solid transparent;
         border-right: 45px solid transparent;
         border-bottom: 100px dotted $campfire-yellow;
@@ -201,12 +201,14 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
     }
     .design-selection::before {
         bottom: 11%;
-        left: 48.5%;
+        bleft: 46%;
+        left: 47.5%;
         animation: fire 2s linear infinite;
     }
     .design-selection::after {
         bottom: 11%;
-        left: 46%;
+        bleft: 48.5%;
+        left: 52%;
         animation: fire 1s linear infinite;
     }
     
@@ -222,11 +224,13 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
     }
     .design-archives::before {
         bottom: 8%;
-        left: 46%;
+        bleft: 46%;
+        left: 47%;
     }
     .design-archives::after {
-        bottom: 8%;
-        left: 50%;
+        bottom: 10%;
+        bleft: 50%;
+        left: 55%;
     }
     
     // logs
@@ -239,15 +243,13 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
         border-radius: 10px;
         display: inline-block;
         z-index: 0;
+        bottom: 8%;
+        left: 44.6%;
     }
     .zen-resources::before {
-        bottom: 8%;
-        left: 44%;
         transform: rotate(10deg);
     }
     .zen-resources::after {
-        bottom: 8%;
-        left: 44%;
         transform: rotate(-10deg);
     }
 
@@ -263,4 +265,32 @@ header:hover, .summary:hover, .preamble:hover, .explanation:hover, .participatio
             opacity: .4;
         }
     }
+
+
+    // ripple text in lake
+    .select, .archives, .resources {
+        animation: ripple 4s ease-in infinite;    
+        -webkit-animation: ripple 4s ease-in infinite;
+    }
+    @keyframes ripple {
+        0% {
+            btransform: rotate(-1deg) skew(20deg);
+            btransform: rotate(-1deg);
+            transform: skew(3deg, 3deg);
+            bletter-spacing: 2px;
+        }
+        50% {
+            btransform: rotate(1deg) skew(-20deg);
+            btransform: rotate(1deg);
+            transform: skew(-3deg, -3deg);
+            bbetter-spacing: 5px;
+        }  
+        100% {
+            btransform: rotate(-1deg) skew(20deg);
+            btransform: rotate(-1deg);
+            transform: skew(3deg, 3deg);
+            bletter-spacing: 2px;
+        }
+    }
+
 }
